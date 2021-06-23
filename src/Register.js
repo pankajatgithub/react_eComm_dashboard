@@ -2,15 +2,24 @@
 import { json } from "body-parser";
 import { Button } from "bootstrap";
 import { cos, div } from "prelude-ls";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {useHistory} from 'react-router-dom';
- 
+import Header from './header'
+
 function Register() {
 
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const history=useHistory();
+
+    useEffect(()=>{
+        if(localStorage.getItem("user-info"))
+        {
+            history.push("/add");
+        }
+    },[]);
+
 
 
     async function signUp() {
@@ -31,6 +40,9 @@ function Register() {
     }
 
     return (
+        // section to add header in page
+        <> 
+          <Header />
         <div className="col-sm-6 offset-sm-3" >
             <h1>
                 Sign Up
@@ -52,6 +64,7 @@ function Register() {
 
 
         </div>
+        </>
 
     )
 

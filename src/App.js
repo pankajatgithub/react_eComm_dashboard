@@ -7,12 +7,13 @@ import Login from './Login';
 import Register from './Register';
 import AddProduct from './AddProduct';
 import UpdateProduct from './UpdateProduct';
+import Protected from './Protected'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+      
         <h1>E-Comm Project</h1>
 
         <Route path="/login">
@@ -24,11 +25,14 @@ function App() {
         </Route>
 
         <Route path="/add">
-          <AddProduct />
+          {/* <AddProduct /> */}
+          <Protected Cmp={AddProduct}/>
         </Route>
 
         <Route path="/update">
-          <UpdateProduct />
+          {/* <UpdateProduct /> */}
+          <Protected Cmp={UpdateProduct}/>
+
         </Route>
       </BrowserRouter>
     </div>

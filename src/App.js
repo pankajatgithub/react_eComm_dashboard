@@ -12,11 +12,8 @@ import Protected from './Protected'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      
-        <h1>E-Comm Project</h1>
-
-        <Route path="/login">
+      <BrowserRouter>      
+       <Route path="/login">
           <Login />
         </Route>
 

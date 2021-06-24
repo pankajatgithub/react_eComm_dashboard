@@ -59,10 +59,6 @@ function Register() {
 
             <br />
             <button onClick={signUp} className="btn btn-primary">Register</button>
-
-
-
-
         </div>
         </>
 

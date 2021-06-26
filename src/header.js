@@ -23,6 +23,7 @@ function logout(){
       {
         localStorage.getItem("user-info")?
         <>
+        <Link to="/">Products</Link>
          <Link to="/add">Add Product</Link>
       <Link to="/update">Update Product</Link>
         

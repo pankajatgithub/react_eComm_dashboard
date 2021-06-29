@@ -30,6 +30,16 @@
 .App-link {
   color: #61dafb;
 }
+.table td, .table th{
+  vertical-align: middle!important;
+}
+.btn-update{
+  background-color:green;
+  color:white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 @keyframes App-logo-spin {
   from {

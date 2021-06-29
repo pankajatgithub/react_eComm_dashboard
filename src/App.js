@@ -27,7 +27,7 @@ function App() {
           <Protected Cmp={AddProduct}/>
         </Route>
 
-        <Route path="/update">
+        <Route path="/update/:id">
           {/* <UpdateProduct /> */}
           <Protected Cmp={UpdateProduct}/>
         </Route>

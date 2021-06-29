@@ -1,7 +1,8 @@
 import Header from './header';
 
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap'
+import { Table } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 function ProducList() {
 
@@ -17,6 +18,10 @@ function ProducList() {
     result = await result.json();
     getData();
     alert(id);
+  }
+
+  function updateOperation(){
+
   }
   async function getData() {
     let result = await fetch("http://localhost:8000/api/list");
@@ -51,7 +56,10 @@ function ProducList() {
                   <td><img style={{ width: 140, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' }} src={"http://localhost:8000/" + item.file_path} /></td>
                   <td>{item.price}</td>
                   <td>{item.description}</td>
-                  <td><button className="btn btn-success" onClick={() => { deleteOperation(item.id) }}>Delete</button></td>
+                  <td><Link to={"/update/"+item.id}><span className="btn-update">Update</span></Link></td>
+                  <td><button className="btn btn-danger" onClick={() => { deleteOperation(item.id) }}>Delete</button></td>
+                  
+
 
                 </tr>)}
           </tbody>

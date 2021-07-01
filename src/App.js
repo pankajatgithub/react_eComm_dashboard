@@ -9,6 +9,7 @@ import AddProduct from './AddProduct';
 import UpdateProduct from './UpdateProduct';
 import Protected from './Protected'
 import ProducList from './ProductList';
+import SearchProduct from './SearchProduct';
 
 function App() {
   return (
@@ -31,6 +32,13 @@ function App() {
           {/* <UpdateProduct /> */}
           <Protected Cmp={UpdateProduct}/>
         </Route>
+
+        <Route path="/search">
+          {/* <UpdateProduct /> */}
+          <Protected Cmp={SearchProduct}/>
+        </Route>
+
+        
 {/* keep this default route at the end always in switch */}
         <Route path="/">
           <ProducList />

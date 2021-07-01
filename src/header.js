@@ -26,6 +26,7 @@ function logout(){
         <Link to="/">Products</Link>
          <Link to="/add">Add Product</Link>
       <Link to="/update">Update Product</Link>
+      <Link to="/search">Search Product</Link>
         
         </>
         :<>
